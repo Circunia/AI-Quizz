@@ -1,19 +1,75 @@
 from tkinter import *
 from tkinter import ttk
+from PIL import Image, ImageTk
+import random
 
 #Start python in terminal : % ./python.exe
 #Commandes : bg -> background ; fg -> foreground
 #Voir quand finis avec CustomTkinter pour voir si c'est beaux
 
-"""
+def resize_img(image):
+    l = 500
+    h = 500
+    image = image.resize((l, h))
+    return image
+
+def IsClicked():
+    return True
+
 def PhotosNiv1():
-    img1 = PhotoImage(window3, file='')
+    img1 = Image.open("P_Niv1\A_14.png")
+    img2 = Image.open("P_Niv1\A_15.png")
+    img3 = Image.open("P_Niv1\A_22.png")
+    img4 = Image.open("P_Niv1\A_6.png")
+    img5 = Image.open("P_Niv1\A_3.png")
+
+    img6 = Image.open("P_Niv1\R_6.png")
+    img7 = Image.open("P_Niv1\R_10.png")
+    img8 = Image.open("P_Niv1\R_11.png")
+    img9 = Image.open("P_Niv1\R_12.png")
+    img10 = Image.open("P_Niv1\R_13.png")
+
+
+    img1 = resize_img(img1)
+    img1 = ImageTk.PhotoImage(img1)
+    lab1 = Label(window3, image=img1)
+    lab1.image = img1
+    lab1.place(x='250', y='10') 
+
+    Tab_PNiv1 = [(img1,False), (img2,False), (img3,False), (img4,False), (img5,False), (img6,True), (img7,True), (img8,True), (img9,True), (img10,True)]
+
+
 
 """
+#Affichage des images une à une
+    Tab_PNiv1 = [(img1,False), (img2,False), (img3,False), (img4,False), (img5,False), (img6,True), (img7,True), (img8,True), (img9,True), (img10,True)]
+    Tab_LabPNiv1 = [lab1, lab2, lab3, lab4, lab5, lab6, lab7, lab8, lab9, lab10]
 
+    for i in len(Tab_PNiv1):
+        Tab_PNiv1[i][0] = resize_img((Tab_PNiv1[i][0]))
+        Tab_PNiv1[i][0] = ImageTk.PhotoImage(Tab_PNiv1[i][0])
+
+        Tab_LabPNiv1[i] = Label(window3, image=Tab_PNiv1[i][0])
+        Tab_LabPNiv1[i].image = Tab_PNiv1[i][0]
+        print(Tab_PNiv1)
+
+
+   #Comptage du score
+    img_path = 
+
+    tab_niv1 = [(img1, True), (img2,), (img3,)? (img4,), (img2,)
+
+    rep = 
+    for i in range (10): #ne doit pas se faire à la suite 
+        if rep == tab_niv1[i][1]:
+            score = score + 1
+    scorePrinted = Label(window3, text=("Vous avez un score de :", score), font=("Verdana", 15, "bold"), fg="black")
+    scorePrinted.place(x='200', y='200')
+"""
 
 #Création de la fênetre 3
 def Niveau1():
+    global window3
     window2.destroy() #ferme la fenêtre 2
     window3 = Tk()
     window3.geometry('1000x650') #x * y
@@ -27,6 +83,8 @@ def Niveau1():
     buttonF = Button(window3, text="Faux", bg='white', fg='black', font=("Verdana", 15, "bold"))
     buttonF.place(x='550', y='550')  
     buttonF.config(width=5, height=2)
+
+    PhotosNiv1()
 
 #Création de la fênetre 4
 def Niveau2():
@@ -53,10 +111,10 @@ def Niveau3():
     window5['bg'] = '#ffc765' 
     window5.resizable(height=False, width=False) #supprime la possibilité de resize
 
-    buttonV = Button(window5, text="Vrai", bg='white', fg='black', font=("Verdana", 15, "bold"))
+    buttonV = Button(window4, text="Vrai", bg='white', fg='black', font=("Verdana", 15, "bold"))
     buttonV.place(x='350', y='550')
     buttonV.config(width=5, height=2)
-    buttonF = Button(window5, text="Faux", bg='white', fg='black', font=("Verdana", 15, "bold"))
+    buttonF = Button(window4, text="Faux", bg='white', fg='black', font=("Verdana", 15, "bold"))
     buttonF.place(x='550', y='550')  
     buttonF.config(width=5, height=2)
 
@@ -97,8 +155,6 @@ start.place(x='465', y='350')
 
 buttonStart = Button(window1, text="Oui !", bg='white', fg='black', command=Pchoix_du_niv)
 buttonStart.place(x='482', y='400')
-
-
 
 
 """
