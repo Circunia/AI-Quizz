@@ -38,7 +38,31 @@ def PhotosNiv1():
 
     Tab_PNiv1 = [(img1,False), (img2,False), (img3,False), (img4,False), (img5,False), (img6,True), (img7,True), (img8,True), (img9,True), (img10,True)]
 
+def PhotosNiv2():
+    img1 = Image.open("P_Niv1\A_14.png")
+    img2 = Image.open("P_Niv1\A_15.png")
+    img3 = Image.open("P_Niv1\A_22.png")
+    img4 = Image.open("P_Niv1\A_6.png")
+    img5 = Image.open("P_Niv1\A_3.png")
 
+    img6 = Image.open("P_Niv1\R_6.png")
+    img7 = Image.open("P_Niv1\R_10.png")
+    img8 = Image.open("P_Niv1\R_11.png")
+    img9 = Image.open("P_Niv1\R_12.png")
+    img10 = Image.open("P_Niv1\R_13.png")
+
+def PhotosNiv3():
+    img1 = Image.open("P_Niv1\A_14.png")
+    img2 = Image.open("P_Niv1\A_15.png")
+    img3 = Image.open("P_Niv1\A_22.png")
+    img4 = Image.open("P_Niv1\A_6.png")
+    img5 = Image.open("P_Niv1\A_3.png")
+
+    img6 = Image.open("P_Niv1\R_6.png")
+    img7 = Image.open("P_Niv1\R_10.png")
+    img8 = Image.open("P_Niv1\R_11.png")
+    img9 = Image.open("P_Niv1\R_12.png")
+    img10 = Image.open("P_Niv1\R_13.png")
 
 """
 #Affichage des images une à une
